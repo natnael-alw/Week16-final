@@ -39,35 +39,21 @@ function App() {
         }
        }
        const [studentDetail, setStudentDetail]= useState(null)
-      //  useEffect(() => {
-      //   // storing input name
-      //   localStorage.setItem("studentDetail", JSON.stringify(studentDetail&& studentDetail));
-      // }, [studentDetail]); 
-      //  console.log(studentDetail)
-
-    // return(
-    //     <>
-    //     <Contacts student={student} handleClick={handleClick} setFind={setFind} find={find} studentDetail={studentDetail} setStudentDetail={setStudentDetail}/>
-    //     <ContactDetail student={student} find={find} studentDetail={studentDetail} setStudentDetail={setStudentDetail}/>
-    //     </>
-    // )
+      
   return (
     <div className="App">
      
      <Navbar/>
-     {/* <ContactHolder API_URL={API_URL}/> */}
-      {/* <StudentData/> */}
+    
       <Routes>
         <Route path='/' element={<StudentData  studentDetail={studentDetail} setStudentDetail={setStudentDetail} API_URL={API_URL}/>}/>
-        <Route path='/contacts/*' element={<Contacts student={student} handleClick={handleClick} find={find} studentDetail={studentDetail} setStudentDetail={setStudentDetail}/>}>
+        <Route path='/contacts/*' element={<Contacts student={student} handleClick={handleClick} setFind={setFind} find={find} studentDetail={studentDetail} setStudentDetail={setStudentDetail}/>}>
 
-        {/* <Route path=":contactDetails" element={<ContactDetail />}/> */}
         </Route>
         
         <Route path="/contactDetails/*" element={<ContactDetail student={student} find={find} studentDetail={studentDetail} setStudentDetail={setStudentDetail} />}/>
          <Route path="/add" element={<Adduser/>}/>
          <Route path="/addform" element ={<AddForm/> } />
-        {/* <Route path='/addform' element={<Formik/>}/> */}
         <Route path="/update" element={<UpdateModal/>}/>
         <Route path='/details' element={<Details  API_URL={API_URL} /> }/>
        

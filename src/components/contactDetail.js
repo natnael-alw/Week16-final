@@ -16,13 +16,14 @@ const ContactDetail = (props) => {
 
     return (
         <Card id='contactDetailDiv'>
-             <ListGroup>
-      <ListGroup.Item><img src={studentDetail.avatar}/></ListGroup.Item>
+                {studentDetail&&<ListGroup>
+      <ListGroup.Item><img src={studentDetail&& studentDetail.avatar}/></ListGroup.Item>
       <ListGroup.Item> Name : {name ? name : <p>404 Notfound</p>}</ListGroup.Item>
       <ListGroup.Item>Phone: {studentDetail && phone}</ListGroup.Item>
       <ListGroup.Item>State: {studentDetail && state}</ListGroup.Item>
       <ListGroup.Item>Zipcode: {studentDetail && zipcode}</ListGroup.Item>
-    </ListGroup>
+    </ListGroup>}
+             
             
         </Card>
     )

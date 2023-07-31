@@ -15,31 +15,7 @@ const Contacts = ({student,
     setFind,
     handleClick,
     }) => {
-    // const [student, setStudent] = useState('')
-    // const [find, setFind] = useState(null)
-
-    // useEffect(() => {
-    //     const fetching = async () => {
-    //         const get = await fetch(API_URL)
-    //         const resp = await get.json()
-    //         setStudent(resp)
-    //         setFind(resp)
-
-    //     }
-
-    //     fetching()
-    // }, []
-    // )
-    // const [studentDetail, setStudentDetail]= useState(null)
-
-//     const handleClick = async (id)=>{
-//  {find && find.map((student)=>
-//  student.id===id &&
-//  setStudentDetail(student)) 
-//  }
-// }
-// {studentDetail&&  console.log(studentDetail)}
-
+    
     const handleChange = (e) => {
         if (!e.target.value) setFind(student)
 
@@ -57,29 +33,6 @@ const Contacts = ({student,
         <>
       
      
-       {/* <Route path='/contacts' element={ <><header>
-                <form onSubmit={(e) => e.preventDefault()} className="form-group mt-3" >
-                    <h3>  <input className='mb-2' onChange={handleChange} 
-                    id='searchInput' size='sm' placeholder="search.." />
-                        <AiOutlineSearch /></h3>
-
-                </form>
-            </header>
-            
-                <ul>
-            {find && find.map((student,index) =>
-            
-            
-                   <li key={student.id} onTouchMove={PointerEvent} onClick={()=>handleClick(student.id)} id='contacts'>
-                    
-                   <FcViewDetails/>{student.fullName}: {student.phoneNumber} {student.state}
-                    </li>
-       
-
-            )}
-                </ul>
-                <ContactDetail student={find} studentDetail={studentDetail}/>
-                </> }  /> */}
        
             <header>
                 <form onSubmit={(e) => e.preventDefault()} className="search mt-3" >
