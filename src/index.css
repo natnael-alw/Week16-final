@@ -5,9 +5,57 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 1rem;
+}
+.active{font-weight: bold;
+}
+#table{
+  /* width: 90%; */
+  margin: 3px;
+}
+li{
+  list-style-type: circle;
+  border-bottom: 1px solid rgb(91, 88, 88);
+  
+}
+#contactDetailDiv{
+  border-bottom: none;
+  padding: 2rem;
+  display: contents;
+  /* --bs-breakpoint-xs:0 */
+  display: flex;
+text-align: left;/* align-items: end; */
+}
+#contacts{
+display: flex;
+margin-top: 1rem;
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+    color: #f62201e7;
 }
+#block{
+display: inline-block;
+}
+
+#addSubmitButton{
+  width: 50vw;
+}
+#searchInput{
+ 
+    border-radius: 25px;
+    border: 2px solid rgb(82, 81, 82);
+    padding: 20px; 
+    width: 400px;
+    height: 5px;    
+
+}
+span{
+  display: block;
+  /* display: inline-block; */
+ /* align-items: end; */
+}
+
