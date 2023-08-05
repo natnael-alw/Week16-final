@@ -15,7 +15,7 @@ function UpdateForm(props) {
     <Form className='update-form' >
       <Form.Group className="mb-3" onSubmit={(e)=>updateStudent(e, student.id)} controlId='form1' >
         <Form.Label>Update {student.fullName}</Form.Label>
-        <Form.Control size='sm' onChange={(e)=>setUpdateName(e.target.value)} type="text" placeholder="Enter Fullname" />
+        <Form.Control size='sm' onChange={(e)=>setUpdateName(e.target.value)} type="text"  />
         <Form.Control size='sm' onChange={(e)=>setUpdatePhone(e.target.value)} type="Phone" placeholder="Enter Phone" />
         <Form.Control size='sm' onChange={(e)=>setUpdateState(e.target.value)} type="" placeholder="Enter state" />
         <Form.Control size='sm' onChange={(e)=>setUpdateZip(e.target.value)} type="Zipcode" placeholder="Enter Zip" />

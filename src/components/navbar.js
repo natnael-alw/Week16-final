@@ -10,11 +10,12 @@ import StudentData from '../studentData';
 import { PiStudentThin } from 'react-icons/pi';
 import { AiOutlineFileAdd } from 'react-icons/ai'
 import { ImBrightnessContrast } from 'react-icons/im'
+import { ToggleButton } from 'react-bootstrap';
 
 
 
 
-function NavbarFunc() {
+function NavbarFunc({handleMode}) {
   return (
     <>
 
@@ -28,8 +29,8 @@ function NavbarFunc() {
               <Link to='/addusedModla'> </Link>
               <Nav.Link as={Link} to="/" element={<StudentData />} > All Student
               </Nav.Link>
-              <Nav.Link as={Link} element={<AddForm />} to="/addform" > Add User<h2></h2>
-              </Nav.Link>
+              {/* <Nav.Link as={Link} element={<AddForm />} to="/addform" > Add User<h2></h2>
+              </Nav.Link> */}
               <Nav.Link as={Link} element={<Contacts />} to="/contacts">Contacts</Nav.Link>
               <NavDropdown title="Modify" id="basic-nav-dropdown">
                 <NavDropdown.Item as={Link} element={<AddForm />} to='/addForm' ><AiOutlineFileAdd /> Add</NavDropdown.Item>
@@ -44,7 +45,8 @@ function NavbarFunc() {
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>
-          <Button variant='dark'><ImBrightnessContrast /></Button>
+          <ToggleButton  variant='dark' onClick={handleMode}><ImBrightnessContrast /></ToggleButton>
+          
 
         </Container>
       </Navbar>

@@ -1,15 +1,10 @@
-import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import AddForm from './addForm'
 import Formik from './formik';
 
 
-function AddMODAL({handleClose, show, handleShow, createStudent, setNewFullName, setNewPhone, setNewState, setNewZipcode}) {
-//   const [show, setShow] = useState(false);
+function AddMODAL({ API_URL,handleClose, show, handleShow, createStudent, setNewFullName, setNewPhone, setNewState, setNewZipcode}) {
 
-//   const handleClose = () => setShow(false);
-//   const handleShow = () => setShow(true);
 
   return (
     <>
@@ -32,6 +27,7 @@ function AddMODAL({handleClose, show, handleShow, createStudent, setNewFullName,
         setNewPhone={setNewPhone}
         setNewState={setNewState}
         setNewZipcode={setNewZipcode}
+        API_URL={API_URL}
         />
         </Modal.Body>
         <Modal.Footer>
